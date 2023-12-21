@@ -35,6 +35,20 @@ namespace StudentManagementTask
                 dataGridView1.Columns[i].ReadOnly = true;
             }
         }
+
+        public void RefreshDataForComboBox()
+        {
+            string query = "SELECT * FROM Table_Students";
+            SqlCommand cmd = new SqlCommand(query, SqlConnection);
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            cmbDersID.DataSource = dataTable;
+            cmbDersID.DisplayMember = "LessonName";
+            cmbDersID.ValueMember = "LessonID";
+
+        }
+
         public void RefreshLectureData()
         {
             string query = "SELECT * FROM Table_Lectures";
