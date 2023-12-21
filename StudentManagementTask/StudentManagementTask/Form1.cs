@@ -46,7 +46,6 @@ namespace StudentManagementTask
             cmbDersID.DataSource = dataTable;
             cmbDersID.DisplayMember = "LessonName";
             cmbDersID.ValueMember = "LessonID";
-
         }
 
         public void RefreshLectureData()
