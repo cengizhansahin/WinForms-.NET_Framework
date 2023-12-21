@@ -45,10 +45,22 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSilLecture = new System.Windows.Forms.Button();
+            this.btnGuncelleLecture = new System.Windows.Forms.Button();
+            this.btnKaydetLecture = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.text_lectureName = new System.Windows.Forms.TextBox();
+            this.text_lectureCode = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -214,6 +226,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -232,6 +246,101 @@
             this.tabPage3.Text = "Sayfa3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(62, 68);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(462, 288);
+            this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnSilLecture);
+            this.panel2.Controls.Add(this.btnGuncelleLecture);
+            this.panel2.Controls.Add(this.btnKaydetLecture);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.text_lectureCode);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.text_lectureName);
+            this.panel2.Location = new System.Drawing.Point(543, 59);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(187, 306);
+            this.panel2.TabIndex = 3;
+            // 
+            // btnSilLecture
+            // 
+            this.btnSilLecture.BackColor = System.Drawing.Color.Red;
+            this.btnSilLecture.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSilLecture.Location = new System.Drawing.Point(12, 208);
+            this.btnSilLecture.Name = "btnSilLecture";
+            this.btnSilLecture.Size = new System.Drawing.Size(86, 23);
+            this.btnSilLecture.TabIndex = 8;
+            this.btnSilLecture.Text = "SİL";
+            this.btnSilLecture.UseVisualStyleBackColor = false;
+            this.btnSilLecture.Click += new System.EventHandler(this.btnSilLecture_Click);
+            // 
+            // btnGuncelleLecture
+            // 
+            this.btnGuncelleLecture.BackColor = System.Drawing.Color.Cyan;
+            this.btnGuncelleLecture.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelleLecture.Location = new System.Drawing.Point(12, 178);
+            this.btnGuncelleLecture.Name = "btnGuncelleLecture";
+            this.btnGuncelleLecture.Size = new System.Drawing.Size(86, 23);
+            this.btnGuncelleLecture.TabIndex = 7;
+            this.btnGuncelleLecture.Text = "GÜNCELLE";
+            this.btnGuncelleLecture.UseVisualStyleBackColor = false;
+            this.btnGuncelleLecture.Click += new System.EventHandler(this.btnGuncelleLecture_Click);
+            // 
+            // btnKaydetLecture
+            // 
+            this.btnKaydetLecture.BackColor = System.Drawing.Color.Lime;
+            this.btnKaydetLecture.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydetLecture.Location = new System.Drawing.Point(12, 148);
+            this.btnKaydetLecture.Name = "btnKaydetLecture";
+            this.btnKaydetLecture.Size = new System.Drawing.Size(86, 23);
+            this.btnKaydetLecture.TabIndex = 6;
+            this.btnKaydetLecture.Text = "KAYDET";
+            this.btnKaydetLecture.UseVisualStyleBackColor = false;
+            this.btnKaydetLecture.Click += new System.EventHandler(this.btnKaydetLecture_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(9, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 14);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Ders Adı";
+            // 
+            // text_lectureName
+            // 
+            this.text_lectureName.Location = new System.Drawing.Point(12, 80);
+            this.text_lectureName.Name = "text_lectureName";
+            this.text_lectureName.Size = new System.Drawing.Size(100, 20);
+            this.text_lectureName.TabIndex = 0;
+            // 
+            // text_lectureCode
+            // 
+            this.text_lectureCode.Location = new System.Drawing.Point(12, 119);
+            this.text_lectureCode.Name = "text_lectureCode";
+            this.text_lectureCode.Size = new System.Drawing.Size(100, 20);
+            this.text_lectureCode.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(9, 103);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 14);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Ders Kodu";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +355,10 @@
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -269,6 +382,15 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnSilLecture;
+        private System.Windows.Forms.Button btnGuncelleLecture;
+        private System.Windows.Forms.Button btnKaydetLecture;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox text_lectureName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox text_lectureCode;
     }
 }
 
