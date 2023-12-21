@@ -20,6 +20,7 @@ namespace StudentManagementTask
             InitializeComponent();
             RefreshData();
             RefreshLectureData();
+            RefreshNoteData();
         }
         public void RefreshData()
         {
@@ -45,6 +46,19 @@ namespace StudentManagementTask
             for (int i = 0; i < dataGridView2.Columns.Count; i++)
             {
                 dataGridView2.Columns[i].ReadOnly = true;
+            }
+        }
+        public void RefreshNoteData()
+        {
+            string query = "SELECT * FROM Table_Notes";
+            SqlCommand sqlCommand = new SqlCommand(query, SqlConnection);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCommand);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            dataGridView3.DataSource = dataTable;
+            for (int i = 0; i < dataGridView3.Columns.Count; i++)
+            {
+                dataGridView3.Columns[i].ReadOnly = true;
             }
         }
 
@@ -205,5 +219,6 @@ namespace StudentManagementTask
                 }
             }
         }
+
     }
 }

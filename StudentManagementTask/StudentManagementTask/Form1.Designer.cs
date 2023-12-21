@@ -44,16 +44,27 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSilLecture = new System.Windows.Forms.Button();
             this.btnGuncelleLecture = new System.Windows.Forms.Button();
             this.btnKaydetLecture = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.text_lectureCode = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.text_lectureName = new System.Windows.Forms.TextBox();
-            this.text_lectureCode = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.text_not = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbOgrenciID = new System.Windows.Forms.ComboBox();
+            this.cmbDersID = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -61,6 +72,9 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -236,16 +250,6 @@
             this.tabPage2.Text = "Sayfa2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(792, 424);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Sayfa3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -307,6 +311,23 @@
             this.btnKaydetLecture.UseVisualStyleBackColor = false;
             this.btnKaydetLecture.Click += new System.EventHandler(this.btnKaydetLecture_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(9, 103);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 14);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Ders Kodu";
+            // 
+            // text_lectureCode
+            // 
+            this.text_lectureCode.Location = new System.Drawing.Point(12, 119);
+            this.text_lectureCode.Name = "text_lectureCode";
+            this.text_lectureCode.Size = new System.Drawing.Size(100, 20);
+            this.text_lectureCode.TabIndex = 0;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -324,22 +345,129 @@
             this.text_lectureName.Size = new System.Drawing.Size(100, 20);
             this.text_lectureName.TabIndex = 0;
             // 
-            // text_lectureCode
+            // tabPage3
             // 
-            this.text_lectureCode.Location = new System.Drawing.Point(12, 119);
-            this.text_lectureCode.Name = "text_lectureCode";
-            this.text_lectureCode.Size = new System.Drawing.Size(100, 20);
-            this.text_lectureCode.TabIndex = 0;
+            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Controls.Add(this.panel3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(792, 424);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Sayfa3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // dataGridView3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(9, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 14);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Ders Kodu";
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(62, 68);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.Size = new System.Drawing.Size(462, 288);
+            this.dataGridView3.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.cmbDersID);
+            this.panel3.Controls.Add(this.cmbOgrenciID);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.text_not);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Location = new System.Drawing.Point(543, 59);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(187, 306);
+            this.panel3.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(12, 231);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "SİL";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Cyan;
+            this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(12, 201);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "GÜNCELLE";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Lime;
+            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.Location = new System.Drawing.Point(12, 171);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(86, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "KAYDET";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(9, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 14);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Ders ID";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(9, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 14);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Öğrenci ID";
+            // 
+            // text_not
+            // 
+            this.text_not.Location = new System.Drawing.Point(12, 127);
+            this.text_not.Name = "text_not";
+            this.text_not.Size = new System.Drawing.Size(68, 20);
+            this.text_not.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(9, 110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 14);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Not";
+            // 
+            // cmbOgrenciID
+            // 
+            this.cmbOgrenciID.FormattingEnabled = true;
+            this.cmbOgrenciID.Location = new System.Drawing.Point(12, 34);
+            this.cmbOgrenciID.Name = "cmbOgrenciID";
+            this.cmbOgrenciID.Size = new System.Drawing.Size(68, 21);
+            this.cmbOgrenciID.TabIndex = 9;
+            // 
+            // cmbDersID
+            // 
+            this.cmbDersID.FormattingEnabled = true;
+            this.cmbDersID.Location = new System.Drawing.Point(12, 76);
+            this.cmbDersID.Name = "cmbDersID";
+            this.cmbDersID.Size = new System.Drawing.Size(68, 21);
+            this.cmbDersID.TabIndex = 10;
             // 
             // Form1
             // 
@@ -359,6 +487,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -391,6 +523,17 @@
         private System.Windows.Forms.TextBox text_lectureName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox text_lectureCode;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox text_not;
+        private System.Windows.Forms.ComboBox cmbDersID;
+        private System.Windows.Forms.ComboBox cmbOgrenciID;
     }
 }
 
