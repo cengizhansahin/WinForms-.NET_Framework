@@ -72,42 +72,48 @@ namespace StudentManagementTask
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            SqlCommand sqlCommand = new SqlCommand("UPDATE Table_Students SET FirstName = @FirstName, LastName = @LastName , BirthDate = @BirthDate , Gender = @Gender WHERE StudentID = @StudentID", SqlConnection);
-            sqlCommand.Parameters.AddWithValue("@StudentID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
-            sqlCommand.Parameters.AddWithValue("@FirstName", text_firstName.Text);
-            sqlCommand.Parameters.AddWithValue("@LastName", text_lastName.Text);
-            sqlCommand.Parameters.AddWithValue("@BirthDate", dateTimePicker1.Value);
-            sqlCommand.Parameters.AddWithValue("@Gender", cmbGender.SelectedItem.ToString());
-            try
+            if (dataGridView1.CurrentRow != null)
             {
-                SqlConnection.Open();
-                sqlCommand.ExecuteNonQuery();
-                SqlConnection.Close();
-                RefreshData();
-                MessageBox.Show("Öğrenci güncelleme işlemi başarılı.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Bir hata oluştu!", ex.Message);
+                SqlCommand sqlCommand = new SqlCommand("UPDATE Table_Students SET FirstName = @FirstName, LastName = @LastName , BirthDate = @BirthDate , Gender = @Gender WHERE StudentID = @StudentID", SqlConnection);
+                sqlCommand.Parameters.AddWithValue("@StudentID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                sqlCommand.Parameters.AddWithValue("@FirstName", text_firstName.Text);
+                sqlCommand.Parameters.AddWithValue("@LastName", text_lastName.Text);
+                sqlCommand.Parameters.AddWithValue("@BirthDate", dateTimePicker1.Value);
+                sqlCommand.Parameters.AddWithValue("@Gender", cmbGender.SelectedItem.ToString());
+                try
+                {
+                    SqlConnection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                    SqlConnection.Close();
+                    RefreshData();
+                    MessageBox.Show("Öğrenci güncelleme işlemi başarılı.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bir hata oluştu!", ex.Message);
+                }
             }
         }
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            SqlCommand sqlCommand = new SqlCommand("DELETE FROM Table_Students WHERE StudentID=@StudentID", SqlConnection);
-            sqlCommand.Parameters.AddWithValue("@StudentID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+            if (dataGridView1.CurrentRow != null)
+            {
+                SqlCommand sqlCommand = new SqlCommand("DELETE FROM Table_Students WHERE StudentID=@StudentID", SqlConnection);
+                sqlCommand.Parameters.AddWithValue("@StudentID", Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
 
-            try
-            {
-                SqlConnection.Open();
-                sqlCommand.ExecuteNonQuery();
-                SqlConnection.Close();
-                RefreshData();
-                MessageBox.Show("Öğrenci silme işlemi başarılı.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Bir hata oluştu!", ex.Message);
+                try
+                {
+                    SqlConnection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                    SqlConnection.Close();
+                    RefreshData();
+                    MessageBox.Show("Öğrenci silme işlemi başarılı.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bir hata oluştu!", ex.Message);
+                }
             }
         }
     }
